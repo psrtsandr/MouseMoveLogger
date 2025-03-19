@@ -23,7 +23,7 @@
     "https": {
       "commandName": "Project",
       "dotnetRunMessages": true,
-      "launchBrowser": true,
+      "launchBrowser": false,
       "launchUrl": "api/mousemovelogger",
       "applicationUrl": "https://localhost:7117;http://localhost:5255",
       "environmentVariables": {
