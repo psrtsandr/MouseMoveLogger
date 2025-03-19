@@ -1,50 +1,36 @@
-import { useEffect, useState } from 'react';
 import './App.css';
 
 function App() {
-    const [forecasts, setForecasts] = useState();
+    class MouseMoveEvent {
+        constructor(x, y, t) {
+            this.x = x;
+            this.y = y;
+            this.t = t;
+        }
+    }
 
-    useEffect(() => {
-        populateWeatherData();
-    }, []);
+    let mouseMoveEvents = [];
+    document.addEventListener("mousemove", handleMouseMove);
 
-    const contents = forecasts === undefined
-        ? <p><em>Loading... Please refresh once the ASP.NET backend has started. See <a href="https://aka.ms/jspsintegrationreact">https://aka.ms/jspsintegrationreact</a> for more details.</em></p>
-        : <table className="table table-striped" aria-labelledby="tableLabel">
-            <thead>
-                <tr>
-                    <th>Date</th>
-                    <th>Temp. (C)</th>
-                    <th>Temp. (F)</th>
-                    <th>Summary</th>
-                </tr>
-            </thead>
-            <tbody>
-                {forecasts.map(forecast =>
-                    <tr key={forecast.date}>
-                        <td>{forecast.date}</td>
-                        <td>{forecast.temperatureC}</td>
-                        <td>{forecast.temperatureF}</td>
-                        <td>{forecast.summary}</td>
-                    </tr>
-                )}
-            </tbody>
-        </table>;
+    function handleMouseMove(event) {
+        mouseMoveEvents.push(new MouseMoveEvent(event.pageX, event.pageY, new Date(Date.now())));
+    }
 
     return (
         <div>
-            <h1 id="tableLabel">Weather forecast</h1>
-            <p>This component demonstrates fetching data from the server.</p>
-            {contents}
+            <button id="sendData" class="button" onClick={handleClick}>Отправить данные</button>
         </div>
     );
-    
-    async function populateWeatherData() {
-        const response = await fetch('weatherforecast');
-        if (response.ok) {
-            const data = await response.json();
-            setForecasts(data);
-        }
+
+    async function handleClick() {
+        await fetch('/api/mousemovelogger', {
+            method: 'POST',
+            headers: {
+                'Content-type': 'application/json;charset=UTF-8'
+            },
+            body: JSON.stringify(mouseMoveEvents)
+        })
+            .catch((err) => console.log(err.message));
     }
 }
 
