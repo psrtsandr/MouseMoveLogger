@@ -15,15 +15,15 @@ public class MouseMoveLoggerController(MouseMoveDbContext context) : ControllerB
         var result = await context.MouseMoveEntries
             .ToDto()
             .ToListAsync();
-        return Ok(result);
+        return Ok(result);  
     }
 
     [HttpPost]
-    public async Task<ActionResult> CreateAsync([FromBody] IEnumerable<MouseMoveEventDto> events)
+    public async Task<ActionResult<MouseMoveEntryDto>> CreateAsync([FromBody] IEnumerable<MouseMoveEventDto> events)
     {
         var entry = events.ToModel();
         context.MouseMoveEntries.Add(entry);
         await context.SaveChangesAsync();
-        return Created();
+        return Created(string.Empty, MouseMoveEntryDto.FromModel(entry));
     }
 }
