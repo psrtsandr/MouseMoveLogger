@@ -31,6 +31,7 @@ function App() {
             body: JSON.stringify(mouseMoveEvents)
         })
             .catch((err) => console.log(err.message));
+        mouseMoveEvents = [];
     }
 }
 
