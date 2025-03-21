@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using MouseMoveLogger.Server.DataAccess;
+using MouseMoveLogger.Infrastructure.DataAccess;
 
 namespace MouseMoveLogger.Server;
 

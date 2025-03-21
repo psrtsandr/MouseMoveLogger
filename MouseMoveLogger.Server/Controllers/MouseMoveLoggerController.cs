@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using MouseMoveLogger.Server.DataAccess;
-using MouseMoveLogger.Server.DTOs;
+using MouseMoveLogger.Application.DTOs;
+using MouseMoveLogger.Infrastructure.DataAccess;
 
 namespace MouseMoveLogger.Server.Controllers;
 
