@@ -1,10 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
+using MouseMoveLogger.Application.DTOs;
+using MouseMoveLogger.Domain.Models;
+using MouseMoveLogger.Infrastructure.DataAccess;
 using MouseMoveLogger.Server.Controllers;
-using MouseMoveLogger.Server.DataAccess;
-using MouseMoveLogger.Server.DTOs;
-using MouseMoveLogger.Server.Models;
 using System.Data.Common;
 
 namespace MouseMoveLogger.Server.Tests;

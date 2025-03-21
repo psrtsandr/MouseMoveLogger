@@ -9,6 +9,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MouseMoveLogger.Server", "M
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MouseMoveLogger.Server.Tests", "MouseMoveLogger.Server.Tests\MouseMoveLogger.Server.Tests.csproj", "{B307596D-C247-4E24-94A4-3C140A01A800}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MouseMoveLogger.Domain", "MouseMoveLogger.Domain\MouseMoveLogger.Domain.csproj", "{10ED0FD5-2DE6-459A-AC72-6E41242CC8EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MouseMoveLogger.Application", "MouseMoveLogger.Application\MouseMoveLogger.Application.csproj", "{ADB794CF-985A-47CB-A9F2-3817F3C65BF6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MouseMoveLogger.Infrastructure", "MouseMoveLogger.Infrastructure\MouseMoveLogger.Infrastructure.csproj", "{8972B862-D77D-46ED-9051-215AD2E5532C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +35,18 @@ Global
 		{B307596D-C247-4E24-94A4-3C140A01A800}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B307596D-C247-4E24-94A4-3C140A01A800}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B307596D-C247-4E24-94A4-3C140A01A800}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10ED0FD5-2DE6-459A-AC72-6E41242CC8EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10ED0FD5-2DE6-459A-AC72-6E41242CC8EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10ED0FD5-2DE6-459A-AC72-6E41242CC8EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10ED0FD5-2DE6-459A-AC72-6E41242CC8EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADB794CF-985A-47CB-A9F2-3817F3C65BF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADB794CF-985A-47CB-A9F2-3817F3C65BF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADB794CF-985A-47CB-A9F2-3817F3C65BF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADB794CF-985A-47CB-A9F2-3817F3C65BF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8972B862-D77D-46ED-9051-215AD2E5532C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8972B862-D77D-46ED-9051-215AD2E5532C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8972B862-D77D-46ED-9051-215AD2E5532C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8972B862-D77D-46ED-9051-215AD2E5532C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
